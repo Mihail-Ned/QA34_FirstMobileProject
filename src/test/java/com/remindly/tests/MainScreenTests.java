@@ -9,7 +9,7 @@ public class MainScreenTests extends TestBase {
     //confirmOk
     @BeforeMethod
     public void preconditions() {
-        app.getMaimScreen().confirm();
+        app.getMainScreen().confirm();
 
     }
 
@@ -17,7 +17,7 @@ public class MainScreenTests extends TestBase {
     @Test
     public void appLaunchTest() {
 
-        Assert.assertTrue(app.getMaimScreen().isNoReminderTextPresent());
+        Assert.assertTrue(app.getMainScreen().isNoReminderTextPresent());
 
     }
 

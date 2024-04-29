@@ -8,17 +8,17 @@ public class ReminderTests extends TestBase{
 
     @BeforeMethod
     public void preconditions(){
-        app.getMaimScreen().confirm();
+        app.getMainScreen().confirm();
     }
 
     //
     @Test
     public void addReminderTitlePositiveTest(){
 
-        app.getMaimScreen().tapOnAddReminder();
+        app.getMainScreen().tapOnAddReminder();
         app.getReminder().enterReminderTitle("Holiday");
         app.getReminder().saveReminder();
-        Assert.assertTrue(app.getMaimScreen().isReminderTitlePresent().contains("Holiday"));
+        Assert.assertTrue(app.getMainScreen().isReminderTitlePresent().contains("Holiday"));
 
     }
 
