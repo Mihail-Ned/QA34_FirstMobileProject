@@ -15,6 +15,7 @@ public class ApplicationManager {
 
     MainScreenHelper mainScreen;
     ReminderHelper reminder;
+    LicensesHelper licenses;
 
     public void init() throws MalformedURLException {
         capabilities = new DesiredCapabilities();
@@ -31,6 +32,7 @@ public class ApplicationManager {
 
         mainScreen = new MainScreenHelper(driver);
         reminder = new ReminderHelper(driver);
+        licenses = new LicensesHelper(driver);
     }
 
     public MainScreenHelper getMainScreen() {
@@ -40,4 +42,10 @@ public class ApplicationManager {
     public ReminderHelper getReminder() {
         return reminder;
     }
-}
+
+    public LicensesHelper getLicenses() {
+        return licenses;
+    }
+
+
+}//class

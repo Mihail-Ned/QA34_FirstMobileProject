@@ -13,12 +13,21 @@ public class MainScreenTests extends TestBase {
 
     }
 
-    //verify text is displayed
+    //verify text is displayed //проверить, отображается ли текст
     @Test
     public void appLaunchTest() {
 
-        Assert.assertTrue(app.getMainScreen().isNoReminderTextPresent());
+        Assert.assertTrue(app.getMainScreen().isNoReminderTextPresent()); //текст напоминания отсутствует
 
+    }
+
+    // checkLicenses//проверка лицензии
+    @Test
+    public void checkLicenses() {
+
+        app.getMainScreen().tapOnHamburgerMenu();
+        app.getMainScreen().tabOnLicensesButton();
+        Assert.assertTrue(app.getLicenses().isNoticesForLibrariesTextPresent());
     }
 
 

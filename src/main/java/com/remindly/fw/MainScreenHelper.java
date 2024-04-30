@@ -32,4 +32,11 @@ public class MainScreenHelper extends BaseHelper{
 
     }
 
+    public void tapOnHamburgerMenu() {
+        tap(By.xpath("//*[@content-desc='More options']"));
+    }
+
+    public void tabOnLicensesButton() {
+        tap(By.id("title"));
+    }
 }//class
