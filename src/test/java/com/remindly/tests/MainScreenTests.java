@@ -23,7 +23,7 @@ public class MainScreenTests extends TestBase {
 
     // checkLicenses//проверка лицензии
     @Test
-    public void checkLicenses() {
+    public void checkLicensesTest() {
 
         app.getMainScreen().tapOnHamburgerMenu();
         app.getMainScreen().tabOnLicensesButton();

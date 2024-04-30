@@ -13,14 +13,6 @@ public class LicensesHelper extends BaseHelper{
         return isElementPresent(By.id("licenses_text_view"));
     }
 
-    //  public String isReminderTitlePresent() { ///присутствует ли заголовок напоминания
-    //        return driver.findElement(By.id("recycle_title")).getText();
-    //
-    //    }
 
-
-//public boolean isNoReminderTextPresent(){
-//        return isElementPresent(By.id("no_reminder_text"));
-//    };
 
 }//class
