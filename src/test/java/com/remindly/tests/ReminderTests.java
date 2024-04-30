@@ -22,4 +22,40 @@ public class ReminderTests extends TestBase{
 
     }
 
+    //
+    @Test
+    public void addReminderWithDatePositiveTest() {
+        app.getMainScreen().tapOnAddReminder();
+        app.getReminder().enterReminderTitle("Holiday");
+        app.getReminder().tapOnDateField();
+        app.getReminder().swipeToMonth("future",1,"MAY");
+        app.getReminder().selectDate(0);
+        app.getReminder().tapOnYear();
+        app.getReminder().swipeToYear("future","2025");
+        app.getReminder().tapOnOk();
+        app.getReminder().saveReminder();
+        Assert.assertTrue(app.getMainScreen().isReminderDatePresent().contains("1/5/2025"));
+
+    }
+
+    //
+    @Test
+    public void addReminderWithTimePositiveTest() {
+        app.getMainScreen().tapOnAddReminder();
+        app.getReminder().enterReminderTitle("Holiday");
+        app.getReminder().tapOnTimeField();
+        app.getReminder().selectTime("am",269,930,535,1195);
+        app.getReminder().tapOnOk();
+        app.getReminder().saveReminder();
+        Assert.assertTrue(app.getMainScreen().isReminderDatePresent().contains("9:30"));
+
+
+    }
+
+    //check Repeat(verify Repeat off)
+
+    //check Repetition Interval(verify "2")
+
+    //check Type of Repetition(verify Week)
+
 }//class
